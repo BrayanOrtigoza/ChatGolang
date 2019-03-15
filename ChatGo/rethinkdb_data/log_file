@@ -1,0 +1,20 @@
+2019-02-25T16:43:53.892411552 0.239828s notice: Recursively removing directory /home/developermensajeros/Documentos/Go/src/Chat3.0/ChatGo/rethinkdb_data/tmp
+2019-02-25T16:43:53.945341879 0.292757s notice: Initializing directory /home/developermensajeros/Documentos/Go/src/Chat3.0/ChatGo/rethinkdb_data
+2019-02-25T16:43:53.945513529 0.292928s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/developermensajeros/Documentos/Go/src/Chat3.0/ChatGo/rethinkdb_data' did not already exist or is empty.)
+2019-02-25T16:43:53.945590639 0.293005s notice: Running rethinkdb 2.3.6~0zesty (GCC 5.4.1)...
+2019-02-25T16:43:53.967324207 0.314743s notice: Running on Linux 4.15.0-45-generic x86_64
+2019-02-25T16:43:53.967413453 0.314828s notice: Loading data from directory /home/developermensajeros/Documentos/Go/src/Chat3.0/ChatGo/rethinkdb_data
+2019-02-25T16:43:54.762884538 1.110299s info: Automatically using cache size of 494 MB
+2019-02-25T16:43:54.840921256 1.188337s notice: Listening for intracluster connections on port 29015
+2019-02-25T16:43:54.852562896 1.199978s notice: Listening for client driver connections on port 28015
+2019-02-25T16:43:54.853101943 1.200517s notice: Listening for administrative HTTP connections on port 8080
+2019-02-25T16:43:54.853105028 1.200520s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2019-02-25T16:43:54.853112252 1.200526s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2019-02-25T16:43:54.853123805 1.200538s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2019-02-25T16:43:54.853142908 1.200557s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2019-02-25T16:43:54.853157349 1.200571s notice: Server ready, "pc99_yp3" 6accc8f6-89db-4473-8407-b53bb677c64b
+2019-02-25T17:03:10.312186167 1156.659601s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2019-02-25T17:03:10.312556502 1156.659971s notice: Shutting down client connections...
+2019-02-25T17:03:10.312742564 1156.660157s notice: All client connections closed.
+2019-02-25T17:03:10.312751876 1156.660166s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2019-02-25T17:03:10.326149994 1156.673565s notice: Storage engine shut down.
