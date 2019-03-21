@@ -28,6 +28,11 @@ const(
 		//status to user
 		active    =  1
 		inactive   = 0
+
+
+		//type channels
+		Group = "group"
+		Private = "private"
 )
 
 func ConcatHostPortRethinkdb(host string, port string) string {

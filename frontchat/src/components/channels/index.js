@@ -5,6 +5,7 @@ import {getService} from "./../../services/services";
 import {Routes} from "./../../services/routes";
 import {postService} from "../../services/services";
 import Socket from "../socket/socket";
+import $ from "jquery";
 
 class ContainerChannels extends Component {
 
@@ -12,7 +13,9 @@ class ContainerChannels extends Component {
         super(props);
         this.state = {
             arraypeople: [],
+            arraygroups: [],
             arrayMessage: [],
+            type: '',
             id_people:'',
             body:'',
             id_channel:'',
@@ -22,10 +25,12 @@ class ContainerChannels extends Component {
 
 
     componentWillMount() {
-        this.makeListPeople()
+        this.makeListPeople();
+        this.makeListGroups();
 
     }
     componentDidMount() {
+
         let ws = new WebSocket('ws://10.10.101.155:4000')
         let socket = this.socket = new Socket(ws);
         socket.on('connect', this.onConnect.bind(this));
@@ -50,6 +55,26 @@ class ContainerChannels extends Component {
         });
     }
 
+    makeListGroups(){
+        let token = localStorage.getItem('@websession');
+
+        let headers = {
+            Authorization: 'Bearer ' + token,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        };
+
+        getService(Routes.LISTGROUPS, headers).then(data => {
+            if (data !== null){
+                console.log(data)
+                this.setState({
+                    arraygroups: data
+                })
+            }
+
+        });
+    }
+
     findMessagePeople(e){
         let token = localStorage.getItem('@websession');
 
@@ -69,12 +94,47 @@ class ContainerChannels extends Component {
                     arrayMessage: data.dataMessages,
                     id_people: e,
                     id_channel: data.idChannel,
+                    type: 'private'
                 },()=>this.setChannel());
             }else if(data.dataMessages === null && data.idChannel !== null){
                 this.setState({
                     arrayMessage: [],
                     id_people: e,
                     id_channel: data.idChannel,
+                    type: 'private'
+                },()=>this.setChannel());
+            }
+
+        });
+    }
+
+    findMessageGroup(e){
+        let token = localStorage.getItem('@websession');
+
+        let headers = {
+            Authorization: 'Bearer ' + token,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        };
+
+        let body = {
+            id: e,
+        };
+
+        postService(Routes.LISTMESSAGEGROUP, body, headers).then(data => {
+            if (data.dataMessages !== null){
+                this.setState({
+                    arrayMessage: data.dataMessages,
+                    id_people: data.iduser,
+                    id_channel: e,
+                    type: 'group',
+                },()=>this.setChannel());
+            }else if(data.dataMessages === null && data.idChannel !== null){
+                this.setState({
+                    arrayMessage: [],
+                    id_people: '',
+                    id_channel: e,
+                    type: 'group',
                 },()=>this.setChannel());
             }
 
@@ -106,6 +166,7 @@ class ContainerChannels extends Component {
     // Sets the channel the user wants to talk to
     setChannel() {
         this.socket.emit('message subscribe', {channelId: this.state.id_channel});
+        $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 1000);
     }
 
     MakeMessage(){
@@ -129,6 +190,7 @@ class ContainerChannels extends Component {
                 body:''
             })
         })
+        $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 1000);
     }
 
     render() {
@@ -151,16 +213,30 @@ class ContainerChannels extends Component {
                                     </div>
                                 )
                             })}
+                            {this.state.arraygroups.length !== null && this.state.arraygroups.length > 0 && this.state.arraygroups.map((element, index) => {
+                                return(
+                                    <div className="chat_list active_chat" key={index} onClick={()=>this.findMessageGroup(element.id)}>
+                                        <div className="chat_people">
+                                            <div className="chat_img"><img
+                                                src="https://ptetutorials.com/images/user-profile.png" alt="sunil"/></div>
+                                            <div className="chat_ib">
+                                                <h5>{element.name}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
                     </div>
                     { this.state.id_channel !== '' ?
                     (<div className="mesgs">
-                        <div className="msg_history">
+                        <div id="msg_history" className="msg_history">
                             {this.state.arrayMessage.map((element, index) => {
                                 return(<Message
                                         key={index}
                                     id_peoplemessage={element.id_people_message}
                                     id_people={this.state.id_people}
+                                    type={this.state.type}
                                     createdAt={element.createdAt}
                                     author={element.author}
                                     message={element.message}

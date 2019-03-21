@@ -6,6 +6,7 @@
     "bootstrap": "^4.3.1",
     "fecha": "^3.0.2",
     "jquery": "^3.3.1",
+    "jquey": "0.0.1-security",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-router-dom": "^4.3.1",

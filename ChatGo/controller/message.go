@@ -13,7 +13,7 @@ import (
 )
 
 func findMessageChannel(c echo.Context, idChannel string) (err error) {
-	fmt.Println("entro")
+
 	filter := make(map[string]interface{})
 
 	filter["id_channel"] = idChannel
@@ -28,16 +28,12 @@ func findMessageChannel(c echo.Context, idChannel string) (err error) {
 
 	err = res.All(&dataMessage)
 
-	/*if err != nil {
-		return c.JSON(http.StatusOK, echo.Map{
-			"error": "No hay Usuario",
-		})
-	}*/
 
 
 	return c.JSON(http.StatusOK, echo.Map{
 		"dataMessages":dataMessage,
 		"idChannel":idChannel,
+		"iduser": findIdUserPeople(),
 	})
 }
 

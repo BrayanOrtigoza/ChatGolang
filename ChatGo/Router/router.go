@@ -46,7 +46,7 @@ func InitRoutes()  {
 func publicRouters(e *echo.Echo)  {
 
 	e.POST("/login", controller.LoginUser)
-
+	e.GET("/makeGroup", controller.MakeGroupChannel)
 
 }
 
@@ -70,12 +70,12 @@ func privateRouters(e *echo.Echo)  {
 	r.GET("/findUser", controller.FindDataUser)
 
 	r.GET("/ListDataPeople", controller.ListDataPeople)
+	r.GET("/ListDataGroups", controller.ListDataGroupChannel)
 
 	r.POST("/FindInitialMessage", controller.FindChannelPeople)
+	r.POST("/FindInitialMessageGroup", controller.FindChannelGroup)
 
 	r.POST("/MakeMessage", controller.InsertNewMessage)
-
-
 
 }
 
