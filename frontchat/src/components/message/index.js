@@ -15,8 +15,6 @@ class Message extends Component {
 
     componentWillMount() {
         createdAt = fecha.format(new Date(this.props.createdAt), 'DD/MM HH:mm:ss');
-        console.log(this.props.id_peoplemessage)
-        console.log(this.props.id_people)
     }
 
 

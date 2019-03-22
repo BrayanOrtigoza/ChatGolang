@@ -131,6 +131,7 @@ img{ max-width:100%;}
 }
 .messaging { padding: 0 0 50px 0;}
 .msg_history {
-    max-height: 516px;
+    max-height: 503px;
+    height: 503px;
     overflow-y: auto;
 }

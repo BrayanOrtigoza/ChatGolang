@@ -3,6 +3,7 @@ package Router
 import (
 	"ChatGolang/ChatGo/ConnectionDB"
 	"ChatGolang/ChatGo/controller"
+	"ChatGolang/ChatGo/websocket"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"net/http"
@@ -47,6 +48,8 @@ func publicRouters(e *echo.Echo)  {
 
 	e.POST("/login", controller.LoginUser)
 	e.GET("/makeGroup", controller.MakeGroupChannel)
+    e.GET("/wbs", websocket.InitWebsocket)
+
 
 }
 

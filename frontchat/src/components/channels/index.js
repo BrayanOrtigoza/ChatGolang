@@ -66,7 +66,6 @@ class ContainerChannels extends Component {
 
         getService(Routes.LISTGROUPS, headers).then(data => {
             if (data !== null){
-                console.log(data)
                 this.setState({
                     arraygroups: data
                 })
@@ -170,30 +169,40 @@ class ContainerChannels extends Component {
     }
 
     MakeMessage(){
-        let token = localStorage.getItem('@websession');
+        if (this.state.body !== ''){
+            let token = localStorage.getItem('@websession');
 
-        let headers = {
-            Authorization: 'Bearer ' + token,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        };
+            let headers = {
+                Authorization: 'Bearer ' + token,
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            };
 
-        let body = {
-            message: this.state.body,
-            id_people_message: this.state.id_people,
-            id_channel: this.state.id_channel,
-        };
+            let body = {
+                message: this.state.body,
+                id_people_message: this.state.id_people,
+                id_channel: this.state.id_channel,
+            };
 
-        postService(Routes.MAKEMESSAGE, body, headers).then(data => {
+            postService(Routes.MAKEMESSAGE, body, headers).then(data => {
 
-            this.setState({
-                body:''
+                this.setState({
+                    body:''
+                })
             })
-        })
-        $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 1000);
+            $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 10000);
+        }
+
     }
 
+    handleKeyPress = (event) => {
+        if(event.key === 'Enter'){
+            this.MakeMessage()
+        }
+    };
+
     render() {
+
 
         return (
                 <div className="inbox_msg">
@@ -251,6 +260,8 @@ class ContainerChannels extends Component {
                                        onChange={(e) => this.setState({
                                            body: e.target.value
                                        })}
+
+                                       onKeyPress={this.handleKeyPress}
                                 />
                                 <button onClick={()=>this.MakeMessage()} className="msg_send_btn" type="button"><i className="fa fa-paper-plane-o"
                                                                                                                    aria-hidden="true"/></button>
