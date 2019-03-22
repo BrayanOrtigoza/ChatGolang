@@ -165,7 +165,7 @@ class ContainerChannels extends Component {
     // Sets the channel the user wants to talk to
     setChannel() {
         this.socket.emit('message subscribe', {channelId: this.state.id_channel});
-        $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 1000);
+        $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 10);
     }
 
     MakeMessage(){
@@ -190,7 +190,7 @@ class ContainerChannels extends Component {
                     body:''
                 })
             })
-            $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 10000);
+            $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 10);
         }
 
     }
@@ -211,20 +211,22 @@ class ContainerChannels extends Component {
                         <div className="inbox_chat">
                             {this.state.arraypeople.map((element, index) => {
                                 return(
-                                    <div className="chat_list active_chat" key={index} onClick={()=>this.findMessagePeople(element.id)}>
+                                    <div className={this.state.id_people === element.id ? ("chat_list active_chat"):("chat_list")} key={index} onClick={()=>this.findMessagePeople(element.id)}>
                                         <div className="chat_people">
                                             <div className="chat_img"><img
                                                 src="https://ptetutorials.com/images/user-profile.png" alt="sunil"/></div>
+
                                             <div className="chat_ib">
                                                 <h5>{element.name} {element.last_name}</h5>
                                             </div>
+                                            <div className="circle circle_active"/>
                                         </div>
                                     </div>
                                 )
                             })}
                             {this.state.arraygroups.length !== null && this.state.arraygroups.length > 0 && this.state.arraygroups.map((element, index) => {
                                 return(
-                                    <div className="chat_list active_chat" key={index} onClick={()=>this.findMessageGroup(element.id)}>
+                                    <div className={this.state.id_channel === element.id ? ("chat_list active_chat"):("chat_list")} key={index} onClick={()=>this.findMessageGroup(element.id)}>
                                         <div className="chat_people">
                                             <div className="chat_img"><img
                                                 src="https://ptetutorials.com/images/user-profile.png" alt="sunil"/></div>

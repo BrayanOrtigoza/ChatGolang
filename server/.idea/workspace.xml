@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3a7e8dbd-805e-4db9-bf12-8e4cfe1acb2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ChatGo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatGo/Router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/Router/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatGo/websocket/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/websocket/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatGo/websocket/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/websocket/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatGo/websocket/websocket.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/websocket/websocket.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/src/components/channels/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/channels/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontchat/src/components/message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/message/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/styles/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/styles/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/styles/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

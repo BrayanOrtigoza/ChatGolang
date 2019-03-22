@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5e058a3-b5c1-436c-a88d-f1ce42a462e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Router/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/websocket/client.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/websocket/handlers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/websocket.go" beforeDir="false" afterPath="$PROJECT_DIR$/websocket/websocket.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/src/components/channels/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/channels/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontchat/src/components/message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/message/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/styles/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/styles/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/styles/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -231,16 +227,6 @@
             </path>
             <path>
               <item name="ChatGo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatGo" type="462c0819:PsiDirectoryNode" />
-              <item name="Router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatGo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatGo" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatGo" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -309,9 +295,9 @@
     <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5016077" side_tool="true" weight="0.24958494" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49839228" visible="true" weight="0.1925844" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49839228" visible="true" weight="0.1925844" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38444924" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.38444924" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />

@@ -51,15 +51,18 @@ img{ max-width:100%;}
 }
 
 .chat_people{ overflow:hidden; clear:both;}
+
 .chat_list {
     border-bottom: 1px solid #c4c4c4;
     margin: 0;
     padding: 18px 16px 10px;
     cursor: pointer;
 }
+
+
 .inbox_chat { height: 550px; overflow-y: scroll;}
 
-.active_chat{ background:#ebebeb;}
+.active_chat{ background: #0AAAC0;}
 
 .incoming_msg_img {
     display: inline-block;
@@ -134,4 +137,17 @@ img{ max-width:100%;}
     max-height: 503px;
     height: 503px;
     overflow-y: auto;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: white;
+}
+
+.circle_active {
+    background: #5cb85c;
 }
