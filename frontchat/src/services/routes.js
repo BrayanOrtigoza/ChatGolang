@@ -1,5 +1,6 @@
 export const Routes = {
     LOGIN : 'http://10.10.101.155:1323/login',
+    LOGOUT : 'http://10.10.101.155:1323/Auth/Logout',
     FINDUSER : 'http://10.10.101.155:1323/Auth/findUser',
     LISTPEOPLE : 'http://10.10.101.155:1323/Auth/ListDataPeople',
     LISTGROUPS : 'http://10.10.101.155:1323/Auth/ListDataGroups',

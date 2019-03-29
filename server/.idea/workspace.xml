@@ -3,10 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="3a7e8dbd-805e-4db9-bf12-8e4cfe1acb2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ChatGo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatGo/Constans/constans.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/Constans/constans.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatGo/Router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/Router/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatGo/controller/channel_people.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/controller/channel_people.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatGo/controller/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/controller/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatGo/controller/people.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatGo/controller/people.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/src/components/channels/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/channels/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/components/login/log_in/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/login/log_in/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/components/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/components/main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/services/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/services/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/src/styles/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/styles/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontchat/src/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/styles/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontchat/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontchat/src/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,13 +32,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="43" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="63" />
+            <state relative-caret-position="300">
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/handlers.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -37,20 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="88" selection-start-line="7" selection-end-line="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/handlers.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="35" column="25" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="25" />
-              <folding>
-                <element signature="e#14#73#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="930">
+              <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -60,6 +70,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>time</find>
+      <find>main.UserStatus</find>
+      <find>MessageCount</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/opt/go/go_1.11.4" />
@@ -70,13 +82,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/handlers.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="y" value="39" />
-    <option name="width" value="1920" />
-    <option name="height" value="1082" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1987" />
+    <option name="y" value="25" />
+    <option name="width" value="1853" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -84,7 +98,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -96,13 +109,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cantina01/server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cantina01" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -119,9 +135,9 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="39" width="1920" height="1082" extended-state="7" />
+    <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24866596" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2733813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -134,7 +150,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32004198" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -153,27 +169,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.go">
+    <entry file="file:///opt/go/go_1.11.4/src/runtime/netpoll.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="88" selection-start-line="7" selection-end-line="88" />
+        <state relative-caret-position="198">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="43" selection-start-line="20" selection-start-column="4" selection-end-line="23" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handlers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="e#14#73#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -181,6 +187,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="15" column="64" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="65" column="31" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
         </state>
       </provider>
     </entry>

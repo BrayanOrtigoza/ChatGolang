@@ -140,6 +140,10 @@ img{ max-width:100%;}
 }
 
 .circle {
+    border-color: #000000;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
     width: 10px;
     height: 10px;
     -moz-border-radius: 50%;

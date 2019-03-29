@@ -62,7 +62,7 @@ func createToken(c echo.Context,idUser string) error{
 	claims := &AuthToken{
 		idUser,
 		jwt.StandardClaims{
-			ExpiresAt: time.Now().Add(time.Hour * 72).Unix(),
+			ExpiresAt: time.Now().Add(time.Hour * 2).Unix(),
 		},
 	}
 
@@ -86,7 +86,12 @@ func FindDataUser(c echo.Context) error {
 	filter := make(map[string]interface{})
 
 	filter["id_user"] = idUser
+	fmt.Println(idUser)
 	res, err := r.Table("people").Filter(filter).Run(ConnectionDB.Session)
+
+	changeStatusPeople("login")
+
+
 
 	var people models.People
 
@@ -100,6 +105,47 @@ func FindDataUser(c echo.Context) error {
 
 	return c.JSON(http.StatusOK, people)
 
+}
+
+func changeStatusPeople(action string){
+
+
+	filter := make(map[string]interface{})
+
+	filter["id_user"] = idUser
+
+	update := make(map[string]interface{})
+
+
+
+	if action == "login"{
+		update["status"] = Constans.Active
+
+		_, err := r.Table("people").Filter(filter).Update(update).Run(ConnectionDB.Session)
+
+		if err != nil {
+			fmt.Println("Usuario Activo")
+		}
+	}
+	if action == "logout"{
+		update["status"] = Constans.Inactive
+
+		_, err := r.Table("people").Filter(filter).Update(update).Run(ConnectionDB.Session)
+		if err != nil {
+			fmt.Println("Usuario Inactivo")
+		}
+	}
+}
+
+func LogOutUser(c echo.Context) error {
+		updateIdUser(c)
+
+		changeStatusPeople("logout")
+
+
+	return c.JSON(http.StatusOK, echo.Map{
+		"message": "Salio de sesion",
+	})
 }
 
 func findNameUser() string {

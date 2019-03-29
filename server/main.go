@@ -22,6 +22,8 @@ func main() {
 
 
 	router.Handle("message subscribe", subscribeChannelMessage)
+	router.Handle("People Data", UserStatus)
+	router.Handle("Channel People", ChannelPeople)
 	http.Handle("/", router)
 
 

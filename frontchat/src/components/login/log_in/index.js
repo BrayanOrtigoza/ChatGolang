@@ -45,7 +45,6 @@ class LogIn extends Component {
         };
 
         postService(Routes.LOGIN, body, headers).then(data => {
-            console.log(data)
             if(data.token !== null && data.token !== undefined) {
                 localStorage.setItem("@websession", data.token);
                 this.props.CheckLocalStorage();
@@ -73,7 +72,7 @@ class LogIn extends Component {
 
                     <form onSubmit={this.handleLogin}>
                         <input type="text" className="fadeIn second"
-                               placeholder="email"
+                               placeholder="Usuario"
                                value={this.state.username}
                                onChange={(e) => this.setState({
                                    username: e.target.value

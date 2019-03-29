@@ -26,8 +26,8 @@ const(
 		disabled  =  0
 
 		//status to user
-		active    =  1
-		inactive   = 0
+		Active    =  1
+		Inactive   = 0
 
 
 		//type channels

@@ -72,6 +72,8 @@ func privateRouters(e *echo.Echo)  {
 
 	r.GET("/findUser", controller.FindDataUser)
 
+	r.GET("/Logout", controller.LogOutUser)
+
 	r.GET("/ListDataPeople", controller.ListDataPeople)
 	r.GET("/ListDataGroups", controller.ListDataGroupChannel)
 

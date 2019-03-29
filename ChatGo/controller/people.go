@@ -25,6 +25,10 @@ func ListDataPeople(c echo.Context) error {
 			"error": "No hay Usuario",
 		})
 	}
-	return c.JSON(http.StatusOK, datapeople)
+	return c.JSON(http.StatusOK, echo.Map{
+	"data": datapeople,
+	"idUser": idUser,
+	"idPeopleUser": findIdUserPeople(),
+	})
 
 }

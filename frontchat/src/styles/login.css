@@ -217,12 +217,14 @@ input[type=text]:placeholder {
     -webkit-animation-delay: 0.6s;
     -moz-animation-delay: 0.6s;
     animation-delay: 0.6s;
+    text-align: center;
 }
 
 .fadeIn.third {
     -webkit-animation-delay: 0.8s;
     -moz-animation-delay: 0.8s;
     animation-delay: 0.8s;
+    text-align: center;
 }
 
 .fadeIn.fourth {

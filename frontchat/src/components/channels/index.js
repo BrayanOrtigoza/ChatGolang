@@ -13,6 +13,7 @@ class ContainerChannels extends Component {
         super(props);
         this.state = {
             arraypeople: [],
+            status: '',
             arraygroups: [],
             arrayMessage: [],
             type: '',
@@ -24,18 +25,32 @@ class ContainerChannels extends Component {
     }
 
 
-    componentWillMount() {
+    componentDidMount() {
         this.makeListPeople();
         this.makeListGroups();
 
     }
-    componentDidMount() {
+    componentWillMount() {
 
         let ws = new WebSocket('ws://10.10.101.155:4000')
         let socket = this.socket = new Socket(ws);
         socket.on('connect', this.onConnect.bind(this));
         socket.on('disconnect', this.onDisconnect.bind(this));
         socket.on('message add', this.onMessageAdd.bind(this));
+        socket.on('People edit', this.onPeopleChanges.bind(this));
+        socket.on('MessageCount add', this.onCountMessage.bind(this));
+    }
+
+
+    onPeopleChanges(data){
+        let newArray = Object.assign(this.state.arraypeople);
+        if (this.state.arraypeople.filter(user => user.id === data.id) !== undefined){
+            newArray.find(person => person.id === data.id).status = data.status;
+        }
+
+        this.setState({
+            arraypeople: newArray,
+        });
     }
 
 
@@ -49,12 +64,25 @@ class ContainerChannels extends Component {
         };
 
         getService(Routes.LISTPEOPLE, headers).then(data => {
-            this.setState({
-                arraypeople: data,
-            });
+            if(data.message === "invalid or expired jwt"){
+                this.props.logout()
+            }else {
+                this.setState({
+                    arraypeople: data.data,
+                }, () => this.setPeopleStatus(data.idUser), this.setChannelPeople(data.idPeopleUser));
+            }
         });
+
     }
 
+    setPeopleStatus(idUser){
+        this.socket.emit('People Data',{idUser: idUser});
+    }
+
+    setChannelPeople(idPeopleUser){
+        console.log(idPeopleUser)
+        this.socket.emit('Channel People',{idPeopleUser: idPeopleUser});
+    }
     makeListGroups(){
         let token = localStorage.getItem('@websession');
 
@@ -151,6 +179,7 @@ class ContainerChannels extends Component {
 
 
     onMessageAdd(message) {
+        console.log(message)
         // this.state.arrayMessage.push(message);
         const newArrayMessage = Object.assign(this.state.arrayMessage);
         newArrayMessage.push(message);
@@ -160,12 +189,16 @@ class ContainerChannels extends Component {
         })
     }
 
+    onCountMessage(message) {
+        console.log(message)
+    }
+
 
 
     // Sets the channel the user wants to talk to
     setChannel() {
         this.socket.emit('message subscribe', {channelId: this.state.id_channel});
-        $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 10);
+        $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 1000);
     }
 
     MakeMessage(){
@@ -189,8 +222,8 @@ class ContainerChannels extends Component {
                 this.setState({
                     body:''
                 })
-            })
-            $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 10);
+            });
+            $("#msg_history").animate({ scrollTop: $('#msg_history').prop("scrollHeight")}, 1000);
         }
 
     }
@@ -219,7 +252,7 @@ class ContainerChannels extends Component {
                                             <div className="chat_ib">
                                                 <h5>{element.name} {element.last_name}</h5>
                                             </div>
-                                            <div className="circle circle_active"/>
+                                            <div className={element.status === 1 ? "circle circle_active": "circle"}/>
                                         </div>
                                     </div>
                                 )
